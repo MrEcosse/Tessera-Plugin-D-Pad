@@ -1,0 +1,50 @@
+# What tools/preview.py shows (docs/PREVIEW.md): a remote with every key; a Blu-ray remote with only the arrows and OK;
+# a tile with a key whose text is not an action; and a tile whose keys have no action yet.
+tiles:
+  - tile: pad
+    name: Cinema
+    entity: remote.cinema
+    options:
+      back: remote.send_command command=BACK
+      up: remote.send_command command=UP
+      home: remote.send_command command=HOME
+      left: remote.send_command command=LEFT
+      ok: remote.send_command command=OK
+      right: remote.send_command command=RIGHT
+      menu: remote.send_command command=MENU
+      down: remote.send_command command=DOWN
+      guide: remote.send_command command=GUIDE
+    sizes: [1x1, 2x1, 2x2, 3x3]
+  - tile: pad
+    name: Blu-ray
+    entity: remote.bluray
+    options:
+      up: remote.send_command command=UP
+      left: remote.send_command command=LEFT
+      ok: remote.send_command command=OK
+      right: remote.send_command command=RIGHT
+      down: remote.send_command command=DOWN
+    sizes: [1x1, 2x2]
+  - tile: pad
+    name: Hall
+    entity: remote.hall
+    options:
+      up: remote.send_command command=UP
+      ok: press ok
+      down: remote.send_command command=DOWN
+      menu: script.turn_on script.open_menu
+    sizes: [1x1, 2x2]
+  - tile: pad
+    name: Not set up
+    sizes: [1x1, 2x1]
+
+states:
+  remote.cinema:
+    state: "on"
+    attributes: { friendly_name: Cinema }
+  remote.bluray:
+    state: "on"
+    attributes: { friendly_name: Blu-ray }
+  remote.hall:
+    state: "on"
+    attributes: { friendly_name: Hall }

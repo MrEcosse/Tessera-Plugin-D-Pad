@@ -1,0 +1,30 @@
+{
+  "_meta": { "name": "English" },
+  "screen": {
+    "no_keys": "Give a key an action"
+  },
+  "app": {
+    "name": "D-pad",
+    "summary": "Up, down, left, right and OK, with back, home, menu and guide beside them, each running the Home Assistant action you choose.",
+    "tile_name": "D-pad",
+    "tile_example": "Arrow keys round an OK key, with back, home, menu and guide in the corners",
+    "key_back": "Back",
+    "key_back_hint": "The action of this key, such as remote.send_command command=BACK. Leave it empty to leave the key out.",
+    "key_up": "Up",
+    "key_up_hint": "Such as remote.send_command command=UP. Leave it empty to leave the key out.",
+    "key_home": "Home",
+    "key_home_hint": "Such as remote.send_command command=HOME. Leave it empty to leave the key out.",
+    "key_left": "Left",
+    "key_left_hint": "Such as remote.send_command command=LEFT. Leave it empty to leave the key out.",
+    "key_ok": "OK",
+    "key_ok_hint": "Such as remote.send_command command=OK. Leave it empty to leave the key out.",
+    "key_right": "Right",
+    "key_right_hint": "Such as remote.send_command command=RIGHT. Leave it empty to leave the key out.",
+    "key_menu": "Menu",
+    "key_menu_hint": "Such as remote.send_command command=MENU, or script.turn_on script.open_menu to act on another entity. Leave it empty to leave the key out.",
+    "key_down": "Down",
+    "key_down_hint": "Such as remote.send_command command=DOWN. Leave it empty to leave the key out.",
+    "key_guide": "Guide",
+    "key_guide_hint": "Such as remote.send_command command=GUIDE. Leave it empty to leave the key out."
+  }
+}

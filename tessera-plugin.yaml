@@ -1,0 +1,53 @@
+# D-pad: the arrow keys of a remote round an OK key, with back, home, menu and guide in the corners. Each key performs
+# the Home Assistant action a person gives it. A key without an action is left out and its place stays empty, so the
+# keys that are there keep their places. docs/MANIFEST.md has every field.
+id: d_pad
+version: 0.1.0
+# 0.10 for tessera::tap_point(): which key the finger was on.
+api: "0.10"
+icon: gamepad-variant
+maintainer: MrEcosse
+license: MIT
+stage: beta
+topics: [media, home]
+requires:
+  esphome: 2026.6.2
+boards: any
+flash_kb: 6
+
+permissions:
+  # A key performs whatever action a person types for it. These are the ones it is made for; the screen does not limit
+  # a key to this list (docs/MANIFEST.md, "permissions"), so read the README's "Good to know" before you add it.
+  home_assistant_actions:
+    - remote.send_command
+    - media_player.select_source
+    - script.turn_on
+    - button.press
+    - input_button.press
+    - scene.turn_on
+    - switch.turn_on
+    - switch.turn_off
+    - switch.toggle
+
+tiles:
+  - id: pad
+    name: tile_name
+    icon: gamepad-variant
+    # The keys are centred and never higher than 14 mm, so a bigger tile only gives them room.
+    sizes: { min: 1x1, max: 3x3 }
+    # Nine keys of a block and an icon each, the line shown before any key has an action, and the nine actions as the
+    # person typed them (in the tile's own object, which is in PSRAM).
+    memory: 2000
+    # The entity the keys act on unless a key names one of its own.
+    domains: [remote, media_player, script, button, input_button, switch, scene, automation]
+    example: tile_example
+    options:
+      - { id: back, kind: text, label: key_back, hint: key_back_hint }
+      - { id: up, kind: text, label: key_up, hint: key_up_hint }
+      - { id: home, kind: text, label: key_home, hint: key_home_hint }
+      - { id: left, kind: text, label: key_left, hint: key_left_hint }
+      - { id: ok, kind: text, label: key_ok, hint: key_ok_hint }
+      - { id: right, kind: text, label: key_right, hint: key_right_hint }
+      - { id: menu, kind: text, label: key_menu, hint: key_menu_hint }
+      - { id: down, kind: text, label: key_down, hint: key_down_hint }
+      - { id: guide, kind: text, label: key_guide, hint: key_guide_hint }
