@@ -1,5 +1,8 @@
 # Changelog
 
+## 0.1.2
+- README: the use case (a set of four wall-panel tiles for conference rooms, sports bars and the like).
+
 ## 0.1.1
 - README: says the tile works with any entity or command, for bespoke setups, and how it differs from Tessera's own
   remote keypad.

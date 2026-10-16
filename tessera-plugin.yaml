@@ -2,7 +2,7 @@
 # the Home Assistant action a person gives it. A key without an action is left out and its place stays empty, so the
 # keys that are there keep their places. docs/MANIFEST.md has every field.
 id: d_pad
-version: 0.1.1
+version: 0.1.2
 # 0.10 for tessera::tap_point(): which key the finger was on.
 api: "0.10"
 icon: gamepad-variant
