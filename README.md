@@ -4,6 +4,14 @@ The navigation keys of a remote on one tile: up, down, left and right round an O
 in the corners. Each key performs the Home Assistant action you give it, so the same tile drives a streamer, a
 Blu-ray player behind an IR remote, a set-top box, or anything a script can reach.
 
+It works with anything: the keys are not tied to any one kind of device or integration. Each key sends exactly the
+action you type, to the entity you choose, so it suits bespoke setups: an IR remote you taught your own commands, a
+streamer behind a script, a projector on a serial bridge, a set-top box in a bar. That is where it differs from
+Tessera's own remote card, which opens when you tap a `remote` tile and shows a ready-made keypad (arrows, OK, Back,
+Home, Play/Pause and volume) for the integrations Tessera knows, such as Android TV, Apple TV and Roku. Use that where
+it fits; use this tile where it does not (Harmony and Broadlink remotes, for example, have no built-in keypad), or when
+you want the keys on the page itself, in one tap, with your own commands.
+
 Give a key an action and it appears; leave it empty and it is left out, and its place stays empty so the other keys do
 not move. The keys sit in a block of three by three in the middle of the tile. A key is never higher than 14 mm nor
 wider than half again its height, so a bigger tile only gives them room. The tile is one cell at least and up to 3x3.
